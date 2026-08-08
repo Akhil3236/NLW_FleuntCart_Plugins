@@ -1,0 +1,357 @@
+/* Mollie Subscription Manager — admin styles
+ * Designed to feel native to FluentCart. Uses FluentCart's CSS variables
+ * where available so dark mode and theme tweaks Just Work.
+ */
+
+/* ───── Plugin's own admin pages (Dashboard, Logs, Settings) ──────────────── */
+.msm-wrap { max-width: 920px; }
+.msm-wrap h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}
+
+/* Status bar */
+.msm-status-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    color: #14532D;
+}
+.msm-status-bar strong { font-size: 14px; display: block; margin-bottom: 3px; }
+.msm-status-bar p { margin: 0; font-size: 13px; line-height: 1.55; opacity: .9; }
+.msm-status-dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    margin-right: 8px; vertical-align: middle;
+}
+.msm-status-dot-active { background: #22C55E; box-shadow: 0 0 0 3px rgba(34,197,94,.2); }
+
+/* Card */
+.msm-card {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+.msm-card-header {
+    padding: 13px 18px;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+.msm-card-body { padding: 18px 20px; }
+.msm-card-desc {
+    margin: 0 0 18px;
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.55;
+}
+
+/* Form fields */
+.msm-field { margin-bottom: 16px; }
+.msm-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+.msm-optional {
+    font-weight: 400;
+    color: #9CA3AF;
+    font-size: 11.5px;
+    margin-left: 4px;
+}
+.msm-input {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px 11px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 13px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color .15s, box-shadow .15s;
+}
+.msm-input:focus {
+    outline: none;
+    border-color: #4F66F5;
+    box-shadow: 0 0 0 3px rgba(79,102,245,.1);
+}
+.msm-hint {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #6B7280;
+}
+.msm-hint code {
+    background: #F3F4F6;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 11.5px;
+}
+
+/* Buttons */
+.msm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: background .15s, opacity .15s;
+}
+.msm-btn-primary    { background: #4F66F5; color: #fff; }
+.msm-btn-primary:hover    { background: #3F56E5; }
+.msm-btn-secondary  { background: #F3F4F6; color: #374151; border: 1px solid #D1D5DB; }
+.msm-btn-secondary:hover  { background: #E5E7EB; }
+.msm-btn-danger     { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
+.msm-btn-danger:hover     { background: #FECACA; }
+.msm-btn-sm         { padding: 5px 12px; font-size: 12px; }
+.msm-btn:disabled   { opacity: .55; cursor: not-allowed; }
+
+/* Result blocks */
+.msm-result-ok, .msm-result-err {
+    margin-top: 14px;
+    padding: 11px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+.msm-result-ok  { background: #F0FDF4; border: 1px solid #BBF7D0; color: #14532D; }
+.msm-result-err { background: #FEF2F2; border: 1px solid #FECACA; color: #991B1B; }
+.msm-result-details {
+    margin-top: 8px;
+    font-size: 12.5px;
+    line-height: 1.7;
+}
+.msm-result-details code {
+    background: rgba(0,0,0,.06);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 11.5px;
+}
+
+.msm-spinner {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #6B7280;
+    font-style: italic;
+}
+
+/* Logs */
+.msm-log-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #6B7280;
+}
+.msm-log-box {
+    background: #1E293B;
+    border-radius: 6px;
+    padding: 14px 16px;
+    max-height: 520px;
+    overflow-y: auto;
+}
+.msm-log-empty { color: #9CA3AF; text-align: center; padding: 18px 0; margin: 0; }
+.msm-log-entry {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+    color: #D1FAE5;
+    padding: 3px 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    line-height: 1.55;
+}
+.msm-log-entry:last-child { border: none; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+ *  FluentCart-injected reactivation card
+ *  Designed to look like a native FluentCart card on the subscription view.
+ *  Uses FluentCart's CSS variables so it blends with their dark/light theme.
+ * ───────────────────────────────────────────────────────────────────────── */
+.msm-fc-card {
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--fct-border-color, #E5E7EB);
+    border-radius: 8px;
+    background: var(--fct-card-bg, #fff);
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    overflow: hidden;
+    color: inherit;
+}
+
+.msm-fc-card-header {
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--fct-border-color, #E5E7EB);
+}
+.msm-fc-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+}
+
+.msm-fc-card-body { padding: 18px 20px; }
+
+.msm-fc-desc {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--color-neutral, #6B7280);
+}
+
+/* Notices */
+.msm-fc-notice {
+    padding: 11px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+.msm-fc-notice-info    { background: #EFF6FF; border: 1px solid #BFDBFE; color: #1E40AF; }
+.msm-fc-notice-success { background: #F0FDF4; border: 1px solid #BBF7D0; color: #14532D; }
+.msm-fc-notice-warning { background: #FFFBEB; border: 1px solid #FDE68A; color: #92400E; }
+
+/* Meta info display (customer ID, mandate) */
+.msm-fc-meta {
+    background: var(--fct-input-bg, #F9FAFB);
+    border: 1px solid var(--fct-border-color, #E5E7EB);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+}
+.msm-fc-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 12.5px;
+}
+.msm-fc-meta-row span {
+    color: var(--color-neutral, #6B7280);
+}
+.msm-fc-meta-row code {
+    background: rgba(0,0,0,.05);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 11.5px;
+    color: inherit;
+}
+
+/* Form */
+.msm-fc-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+    .msm-fc-form { grid-template-columns: 1fr; }
+}
+.msm-fc-field label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: inherit;
+}
+.msm-fc-input {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid var(--fct-border-color, #D1D5DB);
+    border-radius: 5px;
+    font-size: 13px;
+    background: var(--fct-input-bg, #fff);
+    color: inherit;
+    box-sizing: border-box;
+    transition: border-color .15s, box-shadow .15s;
+}
+.msm-fc-input:focus {
+    outline: none;
+    border-color: var(--color-primary, #4F66F5);
+    box-shadow: 0 0 0 3px rgba(79,102,245,.12);
+}
+.msm-fc-amount-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+.msm-fc-amount-row .msm-fc-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+.msm-fc-currency {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background: var(--fct-input-bg, #F3F4F6);
+    border: 1px solid var(--fct-border-color, #D1D5DB);
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-neutral, #6B7280);
+}
+.msm-fc-hint {
+    display: block;
+    margin-top: 4px;
+    font-size: 11.5px;
+    color: var(--color-neutral, #9CA3AF);
+}
+
+/* Actions */
+.msm-fc-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.msm-fc-btn-primary {
+    padding: 8px 18px;
+    background: var(--color-primary, #4F66F5);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s, opacity .15s;
+}
+.msm-fc-btn-primary:hover    { background: #3F56E5; }
+.msm-fc-btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+
+.msm-fc-result { margin-top: 12px; }
+.msm-fc-result .msm-result-ok,
+.msm-fc-result .msm-result-err,
+.msm-fc-result .msm-spinner { margin-top: 0; }
+
+/* Dark-mode awareness (FluentCart toggles `.dark` on a parent) */
+.dark .msm-fc-card {
+    border-color: rgba(45,55,72,.5);
+    background: rgba(26,32,44,.6);
+}
+.dark .msm-fc-card-header { border-bottom-color: rgba(45,55,72,.5); }
+.dark .msm-fc-meta {
+    background: rgba(0,0,0,.18);
+    border-color: rgba(45,55,72,.5);
+}
+.dark .msm-fc-meta-row code { background: rgba(255,255,255,.08); }
+.dark .msm-fc-input         { background: rgba(0,0,0,.18); border-color: rgba(45,55,72,.5); }
+.dark .msm-fc-currency      { background: rgba(0,0,0,.18); border-color: rgba(45,55,72,.5); }
